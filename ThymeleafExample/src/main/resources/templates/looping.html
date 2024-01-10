@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.thymeLeaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<h1 th:text="${key}"></h1>
+	<ul>
+		<li th:each="n:${key}">
+			<span th:text="${n}"></span>
+		</li>
+		
+	</ul>
+	<ul>
+		<li th:each="n,status:${key}">
+			<span th:style="${status.odd} ? 'color:red':' '" th:text="${status.index}+' '+${n}"></span>
+		</li>
+		
+	</ul>
+	
+</body>
+</html>
